@@ -8,14 +8,18 @@ import java.util.LinkedList;
 public class Game {
 
 
-    public static void main(String[] args) {
-        Deck deck = new Deck();
-        Table table = new Table(deck);
-        Play play = new Play(deck,table);
-        int level = 4;
+    private final Deck deck ;
+    private final Table table;
+    private final Play play;
 
+    public Game(Deck deck, Table table, Play play){
+        this.deck = deck;
+        this.table =table;
+        this.play = play;
+    }
+
+    public void start(){
         play.select();
-
 
     }
 }

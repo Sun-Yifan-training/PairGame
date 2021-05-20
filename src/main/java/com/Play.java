@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class Play {
 
-    private Deck deck ;
-    private Table table;
 
-    public Play(Deck deck,Table table){
-        this.deck = deck;
+    private final Table table;
+
+    public Play(Table table){
+
         this.table = table;
     }
 
     public void select(){
         //Table table = new Table(deck);
+        table.showTable();
         Scanner scanner = new Scanner(System.in);
         System.out.println("please take your choice :");
         int input = Integer.parseInt(scanner.next());
