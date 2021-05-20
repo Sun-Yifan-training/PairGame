@@ -66,5 +66,9 @@ public class Table {
 
     }
 
+    public String getCard(int input){
+        return tempAllCards.get(input);
+
+    }
 
 }

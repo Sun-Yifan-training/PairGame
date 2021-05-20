@@ -3,7 +3,7 @@ package com;
 public class Rules {
 
 
-    public static boolean judge(int input1, int input2,Deck deck){
+    public static boolean judgePair(int input1, int input2,Deck deck){
 
 
         Card selectedFirst = deck.getCard(input1);
@@ -12,6 +12,8 @@ public class Rules {
         return  (selectedFirst.getLabel()== selectedSecond.getLabel());
 
     }
+
+
 
     public static void pause(double seconds)
     {

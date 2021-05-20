@@ -19,6 +19,9 @@ public class Main {
         Play play = new Play(table);
         //int level = 4;
         Game game = new Game(deck,table,play);
+        System.out.println("Welcome to Pair Game");
+        System.out.println("Try to find all pairs from the cards on the table");
+        System.out.println("Input number to choose card");
         game.start();
 
 

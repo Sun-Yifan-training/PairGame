@@ -27,17 +27,17 @@ public class Game {
 
 
             int[] choice = play.select();
-            if (Rules.judge(choice[0], choice[1], deck)) {
-                System.out.println("found same pair!");
+            if (Rules.judgePair(choice[0], choice[1], deck)) {
+                System.out.println("Found a correct pair!");
                 List<String> tableNow = table.getTable();
                 table.copyToAllCards(tableNow);
                 times +=1;
             } else {
-                System.out.println("残念　ペアじゃなかった");
+                System.out.println("残念　it's not a pair");
                 table.backwardTempCards();
 
-                System.out.println("Please try again (after 5 seconds)");
-                Rules.pause(5);
+                System.out.println("Please try again (after 4 seconds)");
+                Rules.pause(4);
                 System.out.println("****************");
                 System.out.println("****************");
                 System.out.println("****************");
@@ -45,4 +45,6 @@ public class Game {
         }
         System.out.println("Congratulations! you found all pairs!");
     }
+
+
 }
