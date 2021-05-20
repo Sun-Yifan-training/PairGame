@@ -14,18 +14,18 @@ public class Play {
 
     }
 
-    public int[] select(){//カードを選択
+    public int[] select(int level){//カードを選択
         Scanner scanner = new Scanner(System.in);
         int input1 = 0;
         int input2 = 0;
         while(true) {
-            table.showTable();
+            table.showTable(level);
 
             System.out.println("please take your first choice :");
             String input = scanner.next();
             if(isNumeric(input)){//入力は数字かのチェック
-                if ((Integer.parseInt(input)<0)||(Integer.parseInt(input)>7)){
-                    System.out.println("out of bounds, please input number from 0 to 7");
+                if ((Integer.parseInt(input)<0)||(Integer.parseInt(input)>level)){
+                    System.out.println("out of bounds, please input number from 0 to "+level);
                     continue;
                 }
                 else{
@@ -34,7 +34,7 @@ public class Play {
 
             }
             else{
-                System.out.println("not number, please input number from 0 to 7");
+                System.out.println("not number, please input number from 0 to "+level);
                 continue;
             }
 
@@ -42,7 +42,7 @@ public class Play {
             if(table.getCard(input1).equals(String.valueOf(input1))){//選択は解けたカードかのチェック
 
                 table.getInput(input1);
-                table.showTable();
+                table.showTable(level);
                 break;
             }
             else{
@@ -53,15 +53,22 @@ public class Play {
 
 
         while(true) {
-            table.showTable();
+            table.showTable(level);
 
             System.out.println("please take your second choice :");
             String input = scanner.next();
             if(isNumeric(input)){//入力は数字かのチェック
-                input2 = Integer.parseInt(input);
+                if ((Integer.parseInt(input)<0)||(Integer.parseInt(input)>level)){
+                    System.out.println("out of bounds, please input number from 0 to "+level);
+                    continue;
+                }
+                else{
+                    input2 = Integer.parseInt(input);
+                }
+
             }
             else{
-                System.out.println("not number, please input number from 0 to 7");
+                System.out.println("not number, please input number from 0 to "+level);
                 continue;
             }
 
@@ -69,7 +76,7 @@ public class Play {
             if(table.getCard(input2).equals(String.valueOf(input2))){//選択は解けたカードかのチェック
 
                 table.getInput(input2);
-                table.showTable();
+                table.showTable(level);
                 break;
             }
             else{

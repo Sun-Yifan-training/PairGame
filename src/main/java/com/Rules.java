@@ -1,5 +1,7 @@
 package com;
 
+import java.util.Scanner;
+
 public class Rules {
 
 
@@ -10,6 +12,27 @@ public class Rules {
         Card selectedSecond = deck.getCard(input2);
 
         return  (selectedFirst.getLabel()== selectedSecond.getLabel());
+
+    }
+
+    public static int difficulty(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        while(true){
+            System.out.println("please select difficulty (easy/hard): ");
+            String level = scanner.nextLine();
+            if (level.equals("easy")){
+                return 8;
+
+            }
+            else if(level.equals("hard")){
+                return 16;
+            }
+            else{
+                System.out.println("wrong input");
+            }
+        }
 
     }
 

@@ -5,6 +5,7 @@ import com.Card;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.logging.Level;
 
 public class Game {
 
@@ -20,14 +21,14 @@ public class Game {
 
     }
 
-    public void start(){
+    public void start(int level){
         boolean check = true;
         int times = 0;//正解数
         int totalTimes = 0;//全体プレイ回数
-        while (times<4) {
+        while (times<(level/2)) {
 
 
-            int[] choice = play.select();//選択入力
+            int[] choice = play.select(level);//選択入力
             totalTimes += 1;
             if (Rules.judgePair(choice[0], choice[1], deck)) {//ペアチェック
                 System.out.println("Found a correct pair!");
@@ -46,7 +47,7 @@ public class Game {
             }
         }
         System.out.println("おめでとう! you found all pairs!");
-        System.out.println("You take "+ totalTimes + " steps to complete");
+        System.out.println("You took "+ totalTimes + " steps to complete");
     }
 
 

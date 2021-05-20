@@ -21,13 +21,13 @@ public class Table {//tableに置いてるカードの表示
         updateTable(tempAllCards,selected);//選択したカードを表示
 
     }
-    public void showTable(){//仮tableを表示
+    public void showTable(int level){//仮tableを表示
 
         System.out.println("============");
         System.out.println("|| TABLE ||");
         System.out.println("============");
-        System.out.println(tempAllCards.subList(0,4));
-        System.out.println(tempAllCards.subList(4,8));
+        System.out.println(tempAllCards.subList(0,level/2));
+        System.out.println(tempAllCards.subList(level/2,level));
     }
 
 

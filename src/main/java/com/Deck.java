@@ -9,9 +9,14 @@ public class Deck {
 
     private final List<Card> cardList;
 
-    public Deck() {
+    public Deck(int level) {
         Card[] cards = Card.values();
         List<Card> cardList = new ArrayList<>(Arrays.asList(cards));
+
+        if (level==8){
+            cardList = cardList.subList(0,8);
+        }
+
         Collections.shuffle(cardList);
         this.cardList = cardList;//randomly make deck
 
