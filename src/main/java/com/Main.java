@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int level = 0;
+        int level = 0;//難易度
         System.out.println("Welcome to Pair Game");
         System.out.println("Try to find all pairs from the cards on the table");
-        level = Rules.difficulty();
+        level = Rules.difficulty();//難易度選択
         Deck deck = new Deck(level);
 
 
@@ -28,7 +28,7 @@ public class Main {
         Game game = new Game(deck,table,play);
 
         System.out.println("Input number to choose card");
-        game.start(level);
+        game.start(level);//game start
 
 
     }
