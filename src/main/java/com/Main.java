@@ -14,10 +14,10 @@ public class Main {
         List<String> tempCards = new ArrayList<>();
         for (int i= 0; i <= 8; i++){
             tempCards.add(String.valueOf(i));
-        }
+        }//table初期化
         Table table = new Table(deck,allCards,tempCards);
         Play play = new Play(table);
-        //int level = 4;
+
         Game game = new Game(deck,table,play);
         System.out.println("Welcome to Pair Game");
         System.out.println("Try to find all pairs from the cards on the table");

@@ -3,7 +3,7 @@ package com;
 public class Rules {
 
 
-    public static boolean judgePair(int input1, int input2,Deck deck){
+    public static boolean judgePair(int input1, int input2,Deck deck){//同じペアかどうかのチェック
 
 
         Card selectedFirst = deck.getCard(input1);

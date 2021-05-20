@@ -13,7 +13,7 @@ public class Deck {
         Card[] cards = Card.values();
         List<Card> cardList = new ArrayList<>(Arrays.asList(cards));
         Collections.shuffle(cardList);
-        this.cardList = cardList;
+        this.cardList = cardList;//randomly make deck
 
     }
 
