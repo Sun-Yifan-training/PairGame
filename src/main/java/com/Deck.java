@@ -20,4 +20,8 @@ public class Deck {
     public List<Card> getValues(){
         return cardList;
     }
+
+    public Card getCard(int index){
+        return cardList.get(index);
+    }
 }

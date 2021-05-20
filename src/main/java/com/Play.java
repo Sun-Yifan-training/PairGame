@@ -12,7 +12,7 @@ public class Play {
         this.table = table;
     }
 
-    public void select(){
+    public int[] select(){
         //Table table = new Table(deck);
         table.showTable();
         Scanner scanner = new Scanner(System.in);
@@ -27,9 +27,10 @@ public class Play {
         table.getInput(input2);
         table.showTable();
 
-        if (Rules.judge(input,input2)){
+        int[] choice= new int[]{input,input2};
+        return choice;
 
-        }
+
 
 
     }
